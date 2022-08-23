@@ -1,39 +1,64 @@
-const nameArray=[];
+const nameArray = [];
 
-function display(playerName){
-    const tableBody =document.getElementById('players-cart');
-    tableBody.innerHTML="";
+function display(playerName) {
+    const tableBody = document.getElementById('players-cart');
+    tableBody.innerHTML = "";
+    if (nameArray.length <= 5) {
+        for (let i = 0; i < playerName.length; i++) {
 
-for(let i= 0; i<playerName.length; i++){
-if(playerName.length<=5){
-    const name = nameArray[i].playerName;
-const tr = document.createElement('tr');
-tr.innerHTML= `
-<th>${i+1}</th>
-<td> ${name}</td>
+            const name = nameArray[i].playerName;
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+        <th>${i+1}</th>
+        <td> ${name}</td>
+        
+        `
+            tableBody.appendChild(tr);
 
-`
-tableBody.appendChild(tr);
+        }
+    } else {
+        alert('sorry ! the system cant expect more then five');
+    }
 
 }
 
-else{
-    alert("nothing found with your input")
-}
-}
 
-return playerName;
-}
 
-function addToCart(name){
-    
-    const playersName = name.parentNode.parentNode.children[0].
+function addToCart(event) {
+
+    const playersName = event.parentNode.parentNode.children[0].
     innerText;
-    const playersObject ={
-        playerName : playersName,
-       
+    const playersObject = {
+        playerName: playersName,
+
     }
     nameArray.push(playersObject);
-   display(nameArray);
+    display(nameArray);
 }
 
+
+
+
+// function updatePhoneNumber (isIncrease){
+//     const phoneNumberField = document.getElementById('phone-number-field');
+//     const phoneNumberString = phoneNumberField.value;
+//     const previousPhoneNumber = parseInt(phoneNumberString);
+
+//     let newPhoneNumber;
+
+//     if(isIncrease){
+//         newPhoneNumber = previousPhoneNumber + 1;
+//     }
+//     else{
+//         newPhoneNumber = previousPhoneNumber - 1;
+//     }
+//     phoneNumberField.value = newPhoneNumber;
+
+//     return newPhoneNumber;
+// }
+
+// function updatePhoneTotalPrice(newPhoneNumber){
+//     const phoneTotalPrice = newPhoneNumber * 1219;
+//     const phoneTotalElement = document.getElementById('phone-total');
+//     phoneTotalElement.innerText = phoneTotalPrice;
+// }

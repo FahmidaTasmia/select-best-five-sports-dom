@@ -48,8 +48,8 @@
                 <span>120 Assist</span>
               </p>
               <div class="card-actions">
-                <button class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this)" >Select</button>
-                
+                <button class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this);this.disabled=true">Select</button>
+
               </div>
             </div>
           </div>
@@ -65,7 +65,7 @@
                 <span>120 Assist</span>
               </p>
               <div class="card-actions">
-                <button class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this)" >Select</button>
+                <button class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this);this.disabled=true">Select</button>
               </div>
             </div>
           </div>
@@ -81,7 +81,7 @@
                 <span>120 Assist</span>
               </p>
               <div class="card-actions">
-                <button class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this)" >Select</button>
+                <button class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this);this.disabled=true">Select</button>
               </div>
             </div>
           </div>
@@ -97,7 +97,7 @@
                 <span>120 Assist</span>
               </p>
               <div class="card-actions">
-                <button class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this)" >Select</button>
+                <button class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this);this.disabled=true">Select</button>
               </div>
             </div>
           </div>
@@ -113,7 +113,7 @@
                 <span>120 Assist</span>
               </p>
               <div class="card-actions">
-                <button class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this)" >Select</button>
+                <button class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this);this.disabled=true">Select</button>
               </div>
             </div>
           </div>
@@ -129,7 +129,7 @@
                 <span>120 Assist</span>
               </p>
               <div class="card-actions">
-                <button class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this)" >Select</button>
+                <button class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this);this.disabled=true">Select</button>
               </div>
             </div>
           </div>
@@ -145,7 +145,7 @@
                 <span>120 Assist</span>
               </p>
               <div class="card-actions">
-                <button class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this)" >Select</button>
+                <button class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this);this.disabled=true">Select</button>
               </div>
             </div>
           </div>
@@ -161,7 +161,7 @@
                 <span>120 Assist</span>
               </p>
               <div class="card-actions">
-                <button class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this)" >Select</button>
+                <button class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this);this.disabled=true">Select</button>
               </div>
             </div>
           </div>
@@ -177,36 +177,47 @@
                 <span>120 Assist</span>
               </p>
               <div class="card-actions">
-                <button class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this)" >Select</button>
+                <button class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this);this.disabled=true">Select</button>
               </div>
             </div>
           </div>
         </div>
       </div>
       <!-- CART -->
-      <div >
-       <div class="grid grid-cols-1 h-2/5 w-full ">
-        <p class="text-4xl text-center mb-3">Selected-v
-        </p>
-        <img class="m-auto" src="images/marker.png" alt="">
-        <div class="overflow-x-auto " >
-          <table class="table table-zebra   w-full">
-            <!-- head -->
-            <tbody id="players-cart">
-             
-            </tbody>
-          </table>
-        </div>
-       </div>
+      <div>
+        <div class="grid grid-cols-1 h-2/5 w-full bg-black ">
+          <p class="text-4xl text-center mb-3">Selected-v
+          </p>
+         
+          <div class="overflow-x-auto ">
+            <table class="table table-zebra   w-full">
+              <!-- table head -->
+              <tbody id="players-cart">
 
-<div class="grid grid-cols-1 mx-auto text-center">
-  <h1 class="text-3xl font-bold mb-3">Budget</h1>
-  <img class="m-auto" src="images/marker.png" alt="">
-</div>
-       
-        
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 place-items-center">
+          <h1 class="text-3xl font-bold mb-3 mt-12">Budget</h1>
+          <img class="m-auto" src="images/marker.png" alt="">
+          <div class="py-5">
+            <p >   PerPlayer : <span><input class="bg-black text-white border" type="text" name="" id="" placeholder="1000"></span></p>
+          </div>
+           <div class="mx-auto"> <button  class="btn-sm px-20  bg-blue-900  block"> calculate</button></div>
+           <p class="pt-5">player Expence: $ <span>0</span> </p>
+           <div class="py-5">
+            <p class="pb-5">   Manager : <span><input class="bg-black text-white border" type="text" name="" id="" placeholder="1000"></span></p>
+            <p >   Coach : <span><input class="bg-black text-white border" type="text" name="" id="" placeholder="1000"></span></p>
+          </div>
+          <div class="mx-auto"> <button  class="btn-sm px-20  bg-blue-900  block"> calculate Total</button></div>
+        </div>
+
+
+
       </div>
-      
+
 
     </div>
   </main>
