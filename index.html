@@ -48,7 +48,7 @@
                 <span>120 Assist</span>
               </p>
               <div class="card-actions">
-                <button class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this);this.disabled=true">Select</button>
+                <button id="btn-player-name" class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this);this.disabled=true">Select</button>
 
               </div>
             </div>
@@ -65,7 +65,7 @@
                 <span>120 Assist</span>
               </p>
               <div class="card-actions">
-                <button class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this);this.disabled=true">Select</button>
+                <button id="btn-player-name" class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this);this.disabled=true">Select</button>
               </div>
             </div>
           </div>
@@ -81,7 +81,7 @@
                 <span>120 Assist</span>
               </p>
               <div class="card-actions">
-                <button class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this);this.disabled=true">Select</button>
+                <button id="btn-player-name" class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this);this.disabled=true">Select</button>
               </div>
             </div>
           </div>
@@ -97,7 +97,7 @@
                 <span>120 Assist</span>
               </p>
               <div class="card-actions">
-                <button class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this);this.disabled=true">Select</button>
+                <button id="btn-player-name" class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this);this.disabled=true">Select</button>
               </div>
             </div>
           </div>
@@ -113,7 +113,7 @@
                 <span>120 Assist</span>
               </p>
               <div class="card-actions">
-                <button class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this);this.disabled=true">Select</button>
+                <button id="btn-player-name" class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this);this.disabled=true">Select</button>
               </div>
             </div>
           </div>
@@ -129,7 +129,7 @@
                 <span>120 Assist</span>
               </p>
               <div class="card-actions">
-                <button class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this);this.disabled=true">Select</button>
+                <button id="btn-player-name" class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this);this.disabled=true">Select</button>
               </div>
             </div>
           </div>
@@ -145,7 +145,7 @@
                 <span>120 Assist</span>
               </p>
               <div class="card-actions">
-                <button class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this);this.disabled=true">Select</button>
+                <button id="btn-player-name" class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this);this.disabled=true">Select</button>
               </div>
             </div>
           </div>
@@ -161,7 +161,7 @@
                 <span>120 Assist</span>
               </p>
               <div class="card-actions">
-                <button class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this);this.disabled=true">Select</button>
+                <button id="btn-player-name" class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this);this.disabled=true">Select</button>
               </div>
             </div>
           </div>
@@ -177,7 +177,7 @@
                 <span>120 Assist</span>
               </p>
               <div class="card-actions">
-                <button class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this);this.disabled=true">Select</button>
+                <button id="btn-player-name" class="btn btn-block bg-blue-900 btn-sm " onclick="addToCart(this);this.disabled=true">Select</button>
               </div>
             </div>
           </div>
@@ -186,7 +186,7 @@
       <!-- CART -->
       <div>
         <div class="grid grid-cols-1 h-2/5 w-full bg-black ">
-          <p class="text-4xl text-center mb-3">Selected-v
+          <p id="players-expense" class="text-4xl text-center mb-3 ">Selected-v
           </p>
          
           <div class="overflow-x-auto ">
@@ -203,15 +203,18 @@
           <h1 class="text-3xl font-bold mb-3 mt-12">Budget</h1>
           <img class="m-auto" src="images/marker.png" alt="">
           <div class="py-5">
-            <p >   PerPlayer : <span><input class="bg-black text-white border" type="text" name="" id="" placeholder="1000"></span></p>
+            <p >   PerPlayer : <span><input class="bg-black text-white border" type="text" name="" id="player-field" ></span></p>
           </div>
-           <div class="mx-auto"> <button  class="btn-sm px-20  bg-blue-900  block"> calculate</button></div>
-           <p class="pt-5">player Expence: $ <span>0</span> </p>
+           <div class="mx-auto"> <button id="btn-calculator" class="btn-sm px-20  bg-blue-900  block"> calculate</button></div>
+           <!-- <p class="pt-5">player Expense: $ <span id="player-expense">1</span> </p> -->
+           <h5> player Expense: $ <span id="player-expense">0</span></h5>
            <div class="py-5">
-            <p class="pb-5">   Manager : <span><input class="bg-black text-white border" type="text" name="" id="" placeholder="1000"></span></p>
-            <p >   Coach : <span><input class="bg-black text-white border" type="text" name="" id="" placeholder="1000"></span></p>
+            <p class="pb-5">   Manager : <span><input id="manager-field" class="bg-black text-white border" type="text" name=""  ></span></p>
+            <p >   Coach : <span><input id="Coach-field"  class="bg-black text-white border" type="text" name=""  ></span></p>
           </div>
-          <div class="mx-auto"> <button  class="btn-sm px-20  bg-blue-900  block"> calculate Total</button></div>
+          <div class="mx-auto"> <button id="btn-total-calculate"  class="btn-sm px-20  bg-blue-900  block"> calculate Total</button></div>
+
+          <h5 class="pt-5"> Total Expense: $ <span id="total-expense">0</span></h5>
         </div>
 
 
@@ -224,6 +227,7 @@
 
 
   <script src="js/app.js"></script>
+  <script src="js/budget.js"></script>
 </body>
 
 </html>
